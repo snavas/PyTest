@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a38ce689-abfa-4f9b-bce2-44bf1550503a" name="Default Changelist" comment="" />
+    <list default="true" id="a38ce689-abfa-4f9b-bce2-44bf1550503a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerMedia.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ar/Matcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ar/ROI.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ar/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/peer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/vidclient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/vidserver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientMedia.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/draw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/hand.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_before_network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_vidgear.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_with_async.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stepbystepAR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vidgearClient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vidgearServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/realsense.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/realsense.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/copy_start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/rolex.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/models/rolex.jpg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +39,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XyuoYswVBmq2b8rNXXCIXMAalc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,16 +51,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\s_nava02\Documents\GitHub\PyTest" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\s_nava02\Documents\GitHub\PyTest\classes" />
       <recent name="C:\Users\s_nava02\Documents\GitHub\PyTest\Examples" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.testAR">
-    <configuration name="StreamAlignment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.vidgearClient">
+    <configuration name="ServerMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -44,7 +78,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\s_nava02\Documents\GitHub\PyTest\Examples\StreamAlignment.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ServerMedia.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,7 +109,51 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="clientMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PyTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clientMedia.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="start (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PyTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vidgearClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,7 +163,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vidgearClient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -94,51 +172,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="opencv_pointcloud_viewer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PyTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/opencv_pointcloud_viewer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="python-tutorial-1-depth" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PyTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/python-tutorial-1-depth.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="testAR" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="vidgearServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -148,7 +182,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testAR.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vidgearServer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testAR" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.opencv_pointcloud_viewer" />
-        <item itemvalue="Python.python-tutorial-1-depth" />
-        <item itemvalue="Python.StreamAlignment" />
+        <item itemvalue="Python.vidgearClient" />
+        <item itemvalue="Python.vidgearServer" />
+        <item itemvalue="Python.start (1)" />
+        <item itemvalue="Python.clientMedia" />
+        <item itemvalue="Python.ServerMedia" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +213,18 @@
       <updated>1582030831078</updated>
       <workItem from="1582030834063" duration="7906000" />
       <workItem from="1582105189626" duration="18172000" />
+      <workItem from="1582274027166" duration="5121000" />
+      <workItem from="1582296466769" duration="24000" />
+      <workItem from="1582624210514" duration="7304000" />
+      <workItem from="1582712683838" duration="9512000" />
+      <workItem from="1583144042008" duration="1329000" />
+      <workItem from="1583158743634" duration="1053000" />
+      <workItem from="1583400706925" duration="15424000" />
+      <workItem from="1583484363083" duration="69000" />
+      <workItem from="1583484448933" duration="3241000" />
+      <workItem from="1583747443669" duration="13358000" />
+      <workItem from="1583841263624" duration="4937000" />
+      <workItem from="1583919842825" duration="4789000" />
     </task>
     <servers />
   </component>
@@ -186,32 +232,65 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="150" key="GridCell.Tab.0.bottom" timestamp="1582043447124">
+    <state x="731" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583843172960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.bottom/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1582043447124" />
-    <state width="1877" height="150" key="GridCell.Tab.0.center" timestamp="1582043447124">
+    <state x="731" y="323" key="#com.intellij.fileTypes.FileTypeChooser/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583843172960" />
+    <state width="1877" height="192" key="GridCell.Tab.0.bottom" timestamp="1583412855910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.center/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1582043447124" />
-    <state width="1877" height="150" key="GridCell.Tab.0.left" timestamp="1582043447124">
+    <state width="1877" height="192" key="GridCell.Tab.0.bottom/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583412855910" />
+    <state width="1877" height="192" key="GridCell.Tab.0.center" timestamp="1583412855909">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.left/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1582043447124" />
-    <state width="1877" height="150" key="GridCell.Tab.0.right" timestamp="1582043447124">
+    <state width="1877" height="192" key="GridCell.Tab.0.center/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583412855909" />
+    <state width="1877" height="192" key="GridCell.Tab.0.left" timestamp="1583412855909">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.right/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1582043447124" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1582105505230">
+    <state width="1877" height="192" key="GridCell.Tab.0.left/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583412855909" />
+    <state width="1877" height="192" key="GridCell.Tab.0.right" timestamp="1583412855910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1582105505230" />
+    <state width="1877" height="192" key="GridCell.Tab.0.right/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583412855910" />
+    <state width="1877" height="192" key="GridCell.Tab.1.bottom" timestamp="1583412855910">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.1.bottom/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583412855910" />
+    <state width="1877" height="192" key="GridCell.Tab.1.center" timestamp="1583412855910">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.1.center/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583412855910" />
+    <state width="1877" height="192" key="GridCell.Tab.1.left" timestamp="1583412855910">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.1.left/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583412855910" />
+    <state width="1877" height="192" key="GridCell.Tab.1.right" timestamp="1583412855910">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.1.right/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583412855910" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1583919842841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583919842841" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582110177234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1582110177234" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PyTest$pyTest.coverage" NAME="pyTest Coverage Results" MODIFIED="1582033781504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyTest$handextraction.coverage" NAME="handextraction Coverage Results" MODIFIED="1583411706870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs" />
+    <SUITE FILE_PATH="coverage/PyTest$start__1_.coverage" NAME="start (1) Coverage Results" MODIFIED="1583412837047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

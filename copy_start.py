@@ -12,6 +12,8 @@ import numpy as np
 
 def main():
     device = RealSense()
+    print("Color intrinsics: ", device.getcolorintrinsics())
+    print("Depth intrinsics: ", device.getdepthintrinsics())
     # Initiate ORB detector
     orb = cv2.ORB_create()
     try:

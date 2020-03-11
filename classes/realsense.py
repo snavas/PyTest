@@ -7,43 +7,57 @@ import cv2
 class RealSense(Device):
     #pipeline = rs.pipeline()
 
+    def getcolorintrinsics(self):
+        return self.color_intr
+
+    def getdepthintrinsics(self):
+        return self.depth_intr
+
     # overriding abstract method
-    def __init__(self):
+    def __init__(self, id):
         ctx = rs.context()
         devices = ctx.query_devices()
-        print("Connected devices: ")
-        print(*devices, sep="\n - ")
+        print("<*> Connected devices: ")
+        print(*devices, sep="\n")
 
         # Configure depth and color streams
         self.pipeline = rs.pipeline()
         config = rs.config()
-        print("Using device: ", devices[0])
+        config.enable_device(id)
+        print("<*> Using device: ", id)
+        #for sensor in devices[0].query_sensors():
+        #    print(sensor)
         if "D415" in str(devices[0]):
-            print("Resolution: 1280x720")
+            #print("Resolution: 1280x720")
             config.enable_stream(rs.stream.depth, 1280, 720, rs.format.z16, 30)
             config.enable_stream(rs.stream.color, 1280, 720, rs.format.bgr8, 30)
         else:
-            print("Resolution: 848x480")
+            #print("Resolution: 848x480")
             config.enable_stream(rs.stream.depth, 848, 480, rs.format.z16, 30)
             config.enable_stream(rs.stream.color, 848, 480, rs.format.bgr8, 30)
         # Start streaming
         profile = self.pipeline.start(config)
+        self.color_intr = profile.get_stream(rs.stream.color).as_video_stream_profile().get_intrinsics()
+        self.depth_intr = profile.get_stream(rs.stream.depth).as_video_stream_profile().get_intrinsics()
 
         # Getting the depth sensor's depth scale (see rs-align example for explanation)
         depth_sensor = profile.get_device().first_depth_sensor()
-        depth_scale = depth_sensor.get_depth_scale()
-        print("Depth Scale is: ", depth_scale)
+        self.depth_scale = depth_sensor.get_depth_scale()
+        print("<*> Depth Scale is: ", self.depth_scale)
 
         # We will be removing the background of objects more than
         #  clipping_distance_in_meters meters away
         clipping_distance_in_meters = 1.15  # 1 meter
-        self.clipping_distance = clipping_distance_in_meters / depth_scale
+        self.clipping_distance = clipping_distance_in_meters / self.depth_scale
 
         # Create an align object
         # rs.align allows us to perform alignment of depth frames to others frames
         # The "align_to" is the stream type to which we plan to align depth frames.
         align_to = rs.stream.color
         self.align = rs.align(align_to)
+
+    def getdepthscale(self):
+        return self.depth_scale
 
     # overriding abstract method
     # Streaming loop
