@@ -5,7 +5,7 @@ import libs.hand as hand
 import libs.draw as draw
 import cv2
 
-device = RealSense("752112070204")
+device = RealSense("821212062065")
 server = VidServer()
 
 # infinite loop until [Ctrl+C] is pressed

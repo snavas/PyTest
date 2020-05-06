@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a38ce689-abfa-4f9b-bce2-44bf1550503a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerMedia.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ar/Matcher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ar/ROI.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ar/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/network.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/peer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/vidclient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/vidserver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clientMedia.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/draw.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/hand.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/network.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start_before_network.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start_vidgear.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start_with_async.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stepbystepAR.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vidgearClient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vidgearServer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/vidbiclient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/vidbiserver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vidgearAsyncClient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vidgearAsyncServer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vidgearBiClient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vidgearBiServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PyTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PyTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/realsense.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/realsense.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/copy_start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/rolex.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/models/rolex.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vidgearServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/vidgearServer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,47 +49,27 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/classes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\s_nava02\Documents\GitHub\PyTest" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\s_nava02\Documents\GitHub\PyTest\classes" />
       <recent name="C:\Users\s_nava02\Documents\GitHub\PyTest\Examples" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\s_nava02\Documents\GitHub\PyTest\classes" />
+      <recent name="D:\Users\s_nava02\Documents\GitHub\PyTest" />
+      <recent name="C:\Users\s_nava02\Documents\GitHub\PyTest" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.vidgearClient">
-    <configuration name="ServerMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PyTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ServerMedia.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.vidgearAsyncClient">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +92,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="clientMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,7 +105,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clientMedia.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,7 +114,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="start (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,7 +127,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/start.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,7 +136,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="vidgearClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="vidgearAsyncClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,7 +146,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vidgearClient.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vidgearAsyncClient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="vidgearServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="vidgearAsyncServer (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -182,7 +165,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vidgearServer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vidgearAsyncServer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vidgearAsyncServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PyTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Users\s_nava02\Documents\GitHub\PyTest\vidgearAsyncServer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.vidgearClient" />
-        <item itemvalue="Python.vidgearServer" />
-        <item itemvalue="Python.start (1)" />
-        <item itemvalue="Python.clientMedia" />
-        <item itemvalue="Python.ServerMedia" />
+        <item itemvalue="Python.vidgearAsyncClient" />
+        <item itemvalue="Python.vidgearAsyncServer (1)" />
+        <item itemvalue="Python.server" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.vidgearAsyncServer" />
       </list>
     </recent_temporary>
   </component>
@@ -225,17 +230,37 @@
       <workItem from="1583747443669" duration="13358000" />
       <workItem from="1583841263624" duration="4937000" />
       <workItem from="1583919842825" duration="4789000" />
+      <workItem from="1588595598392" duration="666000" />
+      <workItem from="1588754887447" duration="13575000" />
+      <workItem from="1588794016272" duration="906000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="731" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583843172960">
+    <state x="731" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588763451943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="731" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588763451943" />
     <state x="731" y="323" key="#com.intellij.fileTypes.FileTypeChooser/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583843172960" />
+    <state x="740" y="152" key="#start_(1)" timestamp="1588595662653">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="740" y="152" key="#start_(1)/365.1440.1920.1030/0.0.2048.1112@0.0.2048.1112" timestamp="1588595662653" />
     <state width="1877" height="192" key="GridCell.Tab.0.bottom" timestamp="1583412855910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -272,9 +297,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1583919842841" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582110177234">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588781808793">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588781808793" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.-330.1280.704/0.0.1920.1040@0.0.1920.1040" timestamp="1582110177234" />
   </component>
   <component name="XDebuggerManager">
@@ -289,8 +315,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PyTest$pyTest.coverage" NAME="pyTest Coverage Results" MODIFIED="1582033781504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PyTest$handextraction.coverage" NAME="handextraction Coverage Results" MODIFIED="1583411706870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs" />
     <SUITE FILE_PATH="coverage/PyTest$start__1_.coverage" NAME="start (1) Coverage Results" MODIFIED="1583412837047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyTest$pyTest.coverage" NAME="pyTest Coverage Results" MODIFIED="1582033781504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
