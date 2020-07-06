@@ -48,7 +48,7 @@ options = {'bidirectional_mode': True}
 
 # define Netgear Client with `receive_mode = True` and defined parameter
 # client = NetGear(receive_mode=True, pattern=1, logging=True, **options) local
-client = NetGear(address = '192.168.0.31', port = '5454', protocol = 'tcp',  pattern = 1, receive_mode = True, logging = True, **options)
+client = NetGear(address = '192.168.0.31', port = '5454', protocol = 'udp',  pattern = 1, receive_mode = True, logging = True, **options)
 
 # loop over
 while True:

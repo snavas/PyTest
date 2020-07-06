@@ -23,8 +23,9 @@ class RealSense(Device):
         # Configure depth and color streams
         self.pipeline = rs.pipeline()
         config = rs.config()
-        config.enable_device(id)
-        print("<*> Using device: ", id)
+        #config.enable_device(id)
+        #print("<*> Using device: ", id)
+        print("<*> Using device: ", devices[0])
         #for sensor in devices[0].query_sensors():
         #    print(sensor)
         if "D415" in str(devices[0]):
