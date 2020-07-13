@@ -20,26 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a38ce689-abfa-4f9b-bce2-44bf1550503a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/calibration.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/calibration_old.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/cv2.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/qr_extractor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start_beforeNetGear.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testArUco.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testQR.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testSquares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testSquares2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/realsense.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/realsense.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/copy_start.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testHand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/hand.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/hand.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testAR.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testAR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vidgearAsyncServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/vidgearAsyncServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vidgearBiClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/vidgearBiClient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vidgearBiServer2.py" beforeDir="false" afterPath="$PROJECT_DIR$/vidgearBiServer2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testHand.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testHand.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +74,7 @@
       <recent name="C:\Users\s_nava02\Documents\GitHub\PyTest" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.start">
+  <component name="RunManager" selected="Python.testHand">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,6 +101,9 @@
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -137,6 +123,9 @@
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -220,8 +209,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.start" />
         <item itemvalue="Python.testHand" />
+        <item itemvalue="Python.start" />
         <item itemvalue="Python.testSquares (1)" />
         <item itemvalue="Python.testSquares2 (1)" />
         <item itemvalue="Python.testSquares2" />
@@ -285,7 +274,8 @@
       <workItem from="1593076379030" duration="8084000" />
       <workItem from="1593508149065" duration="5977000" />
       <workItem from="1593524961250" duration="2816000" />
-      <workItem from="1594037443583" duration="3565000" />
+      <workItem from="1594037443583" duration="3635000" />
+      <workItem from="1594632027910" duration="10549000" />
     </task>
     <servers />
   </component>

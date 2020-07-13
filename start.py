@@ -10,6 +10,7 @@ import numpy as np
 import cv2, asyncio
 import argparse
 import sys
+import time
 
 HostPort = 5555
 PeerAddress = "localhost"
@@ -19,6 +20,9 @@ oldCalibration = False
 
 # Create a async frame generator as custom source
 async def custom_frame_generator():
+    # Get global log variable
+    global log
+    tabledistance = 1200 # Default distance to table
     # Open video stream
     device = RealSense("752112070204")
     # loop over stream until its terminated
@@ -26,6 +30,8 @@ async def custom_frame_generator():
         # read frames
         colorframe = device.getcolorstream()
         depthframe = device.getdepthstream()
+        # store time in seconds since the epoch (UTC)
+        timestamp = time.time()
         # check if frame empty
         if colorframe is None:
             break
@@ -41,6 +47,9 @@ async def custom_frame_generator():
                 oldCalibration = False
             calibrationMatrix = newcalibrationMatrix
             if len(calibrationMatrix) == 4:
+                #print(depthframe[int(calibrationMatrix[0][1])][int(calibrationMatrix[0][0])])
+                #print("newtabledistance = ", depthframe[calibrationMatrix[0][1]][calibrationMatrix[0][0]])
+                tabledistance = depthframe[int(calibrationMatrix[0][1])][int(calibrationMatrix[0][0])]
                 # TODO: this solution is too simple, it needs better maths to create a more robust solution
                 # TODO: put all this code into a function?
                 minx = min((calibrationMatrix[0][0], calibrationMatrix[1][0], calibrationMatrix[2][0],
@@ -59,39 +68,42 @@ async def custom_frame_generator():
                 colorframe = cv2.resize(colorframe,(1280, 720)) #TODO: Necessary? Might affect network performance
                 depthframe = depthframe[int(miny):int(miny + height), int(minx):int(minx + width)]
                 depthframe = cv2.resize(depthframe,(1280, 720)) #TODO: Necessary? Might affect network performance
-                #frame = crop_img
                 #print(calibrationMatrix)
 
                 ###################### Hand detection
                 result, hands, points = hand.getHand(colorframe, depthframe, device.getdepthscale())
-                #if hands:
-                    #cv2.drawContours(result, hands, -1, (0, 255, 0), 2)
-                    #hull_list = []
-                    #for i in range(len(hands)):
-                    #    hull = cv2.convexHull(hands[i])
-                    #    hull_list.append(hull)
-                    #for i in range(len(hands)):
-                    #    cv2.drawContours(result, hands, i, (255, 255, 0), 2)
-                    #    cv2.drawContours(result, hull_list, i, (0, 255, 0), 2)
-                    #    term_crit = (cv2.TERM_CRITERIA_EPS, 30, 0.1)
-                    #    _ret, labels, _centers = cv2.kmeans(hull_list[i], 6, None, term_crit, 10, 0)
-                    #    for p in hull_list[i]:
-                    #        print("init ", p, " - ")
-                    #        cv2.circle(result, tuple(p[0]), 2, (0, 0, 255))
-                    #for p in points:
-                    #    cv2.circle(result, tuple(p), 2, (0, 0, 255))
                 drawings = draw.getDraw(colorframe)
                 frame = cv2.bitwise_or(result, drawings)
                 if (oldCalibration):
                     cv2.putText(frame, "CALIBRATED (OLD)", (25, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.25,
                                 (0, 255, 255), 1, cv2.LINE_AA)
+                    cv2.putText(frame, "DISTANCE TO TABLE: "+str(tabledistance), (25, 35), cv2.FONT_HERSHEY_SIMPLEX, 0.25,
+                                (0, 255, 255), 1, cv2.LINE_AA)
                 else:
                     cv2.putText(frame, "CALIBRATED (4)", (25, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.25, (0, 255, 0),
                                 1, cv2.LINE_AA)
+                    cv2.putText(frame, "DISTANCE TO TABLE: "+str(tabledistance), (25, 35), cv2.FONT_HERSHEY_SIMPLEX, 0.25, (0, 255, 0),
+                                1, cv2.LINE_AA)
                 if hands:
+                # Print and log the fingertips
                     for i in range(len(hands)):
+                        # Calculate hand centre
+                        M = cv2.moments(hands[i])
+                        cX = int(M["m10"] / M["m00"])
+                        cY = int(M["m01"] / M["m00"])
+                        cv2.circle(frame, (cX, cY), 4, utils.id_to_random_color(i), -1)
+                        cv2.putText(frame, "  " + str((tabledistance - depthframe[cY][cX]) / 100), (cX, cY),
+                                    cv2.FONT_HERSHEY_SIMPLEX, 0.25, utils.id_to_random_color(i),
+                                    1, cv2.LINE_AA)
+                        string = "T " + str(timestamp) + " DH " + str(tabledistance - depthframe[cY][cX])
                         for f in points[i]:
                             cv2.circle(frame, f, 4, utils.id_to_random_color(i), -1)
+                            cv2.putText(frame, "  " + str((tabledistance - depthframe[f[1]][f[0]])/100), f, cv2.FONT_HERSHEY_SIMPLEX, 0.25, utils.id_to_random_color(i),
+                                        1, cv2.LINE_AA)
+                            #print("color pixel value of ", f, ":", frame[f[1]][f[0]]) # <- TODO: reverse coordinates idk why
+                            #print("depth pixel value of ", f, ":", depthframe[f[1]][f[0]])
+                            string += " P " + str(f)
+                        log.write(string+"\n")
 
             else:
                 cv2.putText(frame, "NOT CALIBRATED", (25, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.25, (0, 0, 255), 1, cv2.LINE_AA)
@@ -105,6 +117,8 @@ async def custom_frame_generator():
         await asyncio.sleep(0.00001)
     # close stream
     device.stop()
+    # close file
+    log.close()
 
 # Create a async function where you want to show/manipulate your received frames
 async def client_iterator(client):
@@ -165,4 +179,5 @@ if __name__ == '__main__':
         HostPort = 5555
         PeerAddress = "localhost"
         PeerPort = 5555
+    log = open("logs/log_"+str(int(time.time()))+".txt", "x")
     asyncio.run(netgear_async_playback(options))

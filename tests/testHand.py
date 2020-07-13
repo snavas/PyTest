@@ -97,7 +97,8 @@ def main():
     try:
         while True:
             image = device.getcolorstream()
-            image = cv2.imread("D:/Users/s_nava02/Desktop/raw_output.png")
+            depth = device.getdepthstream()
+            #image = cv2.imread("D:/Users/s_nava02/Desktop/raw_output.png")
             #screenshot = image.copy()
             #if flag == 0:
             #    cv2.imwrite("D:/Users/s_nava02/Desktop/raw_output.png", screenshot)
@@ -235,6 +236,8 @@ def main():
                 print(len(fingers))
                 for f in fingers:
                     cv2.circle(image, (f[0], f[1]), 4, (255, 255, 255)) # identified finger: white
+                    print("image size: ", image.shape)
+                    print("color pixel value of ", f, ":", image[f[0]][f[1]])
                     pass
 
             # Show images
