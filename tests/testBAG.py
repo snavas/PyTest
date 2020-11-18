@@ -88,8 +88,7 @@ def id_to_random_color(number):
         return(255,255,255)
 
 def main():
-    device = RealSense('C:/GECCO/pinktest.bag')
-    file = True
+    device = RealSense("1234")
     #print("Color intrinsics: ", device.getcolorintrinsics())
     #print("Depth intrinsics: ", device.getdepthintrinsics())
     # Initiate ORB detector
@@ -98,8 +97,6 @@ def main():
     try:
         while True:
             image = device.getcolorstream()
-            if file:
-                image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
             depth = device.getdepthstream()
             #image = cv2.imread("D:/Users/s_nava02/Desktop/raw_output.png")
             screenshot = image.copy()
@@ -239,8 +236,8 @@ def main():
                 print(len(fingers))
                 for f in fingers:
                     cv2.circle(image, (f[0], f[1]), 4, (255, 255, 255)) # identified finger: white
-                    #print("image size: ", image.shape)
-                    #print("color pixel value of ", f, ":", image[f[0]][f[1]])
+                    print("image size: ", image.shape)
+                    print("color pixel value of ", f, ":", image[f[0]][f[1]])
                     pass
 
             # Show images
