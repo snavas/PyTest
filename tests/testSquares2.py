@@ -14,13 +14,17 @@ import os
 CV_PI = 3.1415926535897932384626433832795
 
 def main():
-    device = RealSense(21312312312)
+    #device = RealSense(21312312312)
+    device = RealSense('C:/Users/s_nava02/sciebo/GECCO/pinktest.bag')
+    file = True
     print("Color intrinsics: ", device.getcolorintrinsics())
     print("Depth intrinsics: ", device.getdepthintrinsics())
 
     try:
         while True:
             image = device.getcolorstream()
+            if file:
+                image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
             hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
             lower_yellow = np.array([0, 50, 50])
             upper_yellow = np.array([5, 255, 255])

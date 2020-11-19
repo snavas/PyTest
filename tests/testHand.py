@@ -26,11 +26,11 @@ def unit_vector(vector):
 def angle_between(v1, v2):
     """ Returns the angle in radians between vectors 'v1' and 'v2'::
 
-            >>> angle_between((1, 0, 0), (0, 1, 0))
+            #>>> angle_between((1, 0, 0), (0, 1, 0))
             1.5707963267948966
-            >>> angle_between((1, 0, 0), (1, 0, 0))
+            #>>> angle_between((1, 0, 0), (1, 0, 0))
             0.0
-            >>> angle_between((1, 0, 0), (-1, 0, 0))
+            #>>> angle_between((1, 0, 0), (-1, 0, 0))
             3.141592653589793
     """
     v1_u = unit_vector(v1)
@@ -88,7 +88,8 @@ def id_to_random_color(number):
         return(255,255,255)
 
 def main():
-    device = RealSense('C:/GECCO/pinktest.bag')
+    device = RealSense('C:/Users/s_nava02/sciebo/GECCO/pinktest.bag')
+    # device = RealSense("752112070204")
     file = True
     #print("Color intrinsics: ", device.getcolorintrinsics())
     #print("Depth intrinsics: ", device.getdepthintrinsics())

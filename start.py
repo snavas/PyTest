@@ -16,6 +16,8 @@ import time
 HostPort = 5555
 PeerAddress = "localhost"
 PeerPort = 5555
+File = 'C:/Users/s_nava02/sciebo/GECCO/pinktest.bag'
+fileFlag = True
 calibrationMatrix = []
 oldCalibration = False
 
@@ -26,11 +28,14 @@ async def custom_frame_generator():
         global log
         tabledistance = 1200 # Default distance to table
         # Open video stream
-        device = RealSense("752112070204")
+        # device = RealSense("752112070204")
+        device = RealSense(File)
         # loop over stream until its terminated
         while True:
             # read frames
             colorframe = device.getcolorstream()
+            if fileFlag:
+                colorframe = cv2.cvtColor(colorframe, cv2.COLOR_RGB2BGR)
             depthframe = device.getdepthstream()
             # store time in seconds since the epoch (UTC)
             timestamp = time.time()
@@ -47,6 +52,7 @@ async def custom_frame_generator():
             else:
                 oldCalibration = False
             calibrationMatrix = newcalibrationMatrix
+            print(len(calibrationMatrix))
             if len(calibrationMatrix) == 4:
                 #print(depthframe[int(calibrationMatrix[0][1])][int(calibrationMatrix[0][0])])
                 #print("newtabledistance = ", depthframe[calibrationMatrix[0][1]][calibrationMatrix[0][0]])
@@ -174,6 +180,7 @@ def getOptions(args=sys.argv[1:]):
     parser.add_argument("-o", "--host", type=int, help="Host port number")
     parser.add_argument("-a", "--address", help="Peer IP address")
     parser.add_argument("-p", "--port", type=int, help="Peer port number")
+    parser.add_argument("-f", "--file", help="Simulate camera sensor from .bag file")
     #parser.add_argument("-v", "--verbose",dest='verbose',action='store_true', help="Verbose mode.")
     options = parser.parse_args(args)
     return options
@@ -190,5 +197,7 @@ if __name__ == '__main__':
         HostPort = 5555
         PeerAddress = "localhost"
         PeerPort = 5555
+    if options.file:
+        File = options.file
     log = open("logs/log_"+str(int(time.time()))+".log", "x")
     asyncio.run(netgear_async_playback(options))

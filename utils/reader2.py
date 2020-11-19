@@ -3,7 +3,7 @@ import shutil, time, pyrealsense2 as rs2
 
 class Pipeline:
 
-    def __init__(self, filepath='C:/GECCO/test2.bag'):
+    def __init__(self, filepath='C:/Users/s_nava02/sciebo/GECCO/test2.bag'):
         self.filepath = filepath
         context = rs2.context()
         self.device = device = context.devices[0]

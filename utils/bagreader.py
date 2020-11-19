@@ -21,7 +21,7 @@ parser = argparse.ArgumentParser(description="Read recorded bag file and display
 parser.add_argument("-i", "--input", type=str, help="Path to the bag file")
 # Parse the command line arguments to an object
 args = parser.parse_args()
-args.input = 'C:/GECCO/pinktest.bag'
+args.input = 'C:/Users/s_nava02/sciebo/GECCO/pinktest.bag'
 # Safety if no parameter have been given
 if not args.input:
     print("No input paramater have been given.")
