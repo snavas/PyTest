@@ -15,6 +15,7 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import DBSCAN
 import libs.utils as utils
 import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 #import screeninfo
 import math
 import time
@@ -88,14 +89,15 @@ def id_to_random_color(number):
         return(255,255,255)
 
 def main():
-    device = RealSense('C:/Users/s_nava02/sciebo/GECCO/pinktest.bag')
+    device = RealSense('../material/pinktest.bag')
+    #device = RealSense('D:/Users/samue/Documents/GitHub/PyTest/material/pinktest.bag')
     # device = RealSense("752112070204")
     file = True
     #print("Color intrinsics: ", device.getcolorintrinsics())
     #print("Depth intrinsics: ", device.getdepthintrinsics())
     # Initiate ORB detector
     orb = cv2.ORB_create()
-    flag = 500
+    flag = -1
     try:
         while True:
             image = device.getcolorstream()
@@ -105,7 +107,7 @@ def main():
             #image = cv2.imread("D:/Users/s_nava02/Desktop/raw_output.png")
             screenshot = image.copy()
             if flag == 0:
-                cv2.imwrite("C:/GECCO/raw_output.png", screenshot)
+                cv2.imwrite("../material/raw_output.png", screenshot)
             flag -= 1
             ###################################################
             # def gethandmask(colorframe image):
@@ -179,6 +181,13 @@ def main():
                 #print(clustering.components_)
                 rhull = np.column_stack((hull[:,0], index[:,0]))
                 centers = utils.groupPointsbyLabels(rhull, clustering.labels_)
+
+                #cv2.imwrite('234.jpg', cnt)
+                mask = np.ones(image.shape[:2], dtype="uint8") * 255
+                cv2.drawContours(mask, cnt, -1, 0, -1)
+                cv2.imwrite('../234.jpg', mask)
+                #raise SystemExit(0)
+
                 defects = cv2.convexityDefects(cnt, np.array(centers)[:,2])
                 c = 0
                 for p in hull:
