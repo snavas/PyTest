@@ -182,10 +182,10 @@ def main():
                 rhull = np.column_stack((hull[:,0], index[:,0]))
                 centers = utils.groupPointsbyLabels(rhull, clustering.labels_)
 
-                #cv2.imwrite('234.jpg', cnt)
-                mask = np.ones(image.shape[:2], dtype="uint8") * 255
-                cv2.drawContours(mask, cnt, -1, 0, -1)
-                cv2.imwrite('../234.jpg', mask)
+                # JUST TO PRINT THE PROBLEMATIC CONTOUR
+                #mask = np.ones(image.shape[:2], dtype="uint8") * 255
+                #cv2.drawContours(mask, cnt, -1, 0, -1)
+                #cv2.imwrite('../234.jpg', mask)
                 #raise SystemExit(0)
 
                 defects = cv2.convexityDefects(cnt, np.array(centers)[:,2])
