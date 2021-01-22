@@ -20,16 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a38ce689-abfa-4f9b-bce2-44bf1550503a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/testHandOverlay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testOverlayPyGame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testOverlayQT.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PyTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PyTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_output.png" beforeDir="false" afterPath="$PROJECT_DIR$/raw_output.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testBAG.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testArUco.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testArUco.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testHand.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testHand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSquares.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testSquares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSquares2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testSquares2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/bagreader.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/bagreader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/reader2.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/reader2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +60,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="19362cbc-e718-47f3-8bae-5afb1a83eaed" />
   <component name="ProjectId" id="1XyuoYswVBmq2b8rNXXCIXMAalc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -71,7 +72,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../anaconda3/envs" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -138,10 +139,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testArUco" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PyTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/testArUco.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="testHand" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -157,17 +183,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testSquares" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="testHandOverlay" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/testSquares.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/testHandOverlay.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,54 +205,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testSquares2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="testOverlayPyGame" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/testSquares2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/testOverlayPyGame.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Doctests in testHand" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
-      <module name="PyTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/testHand.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.start" />
-        <item itemvalue="Python.testSquares2" />
-        <item itemvalue="Python.testSquares" />
+        <item itemvalue="Python.testHandOverlay" />
+        <item itemvalue="Python.testArUco" />
+        <item itemvalue="Python.testOverlayPyGame" />
         <item itemvalue="Python.testHand" />
-        <item itemvalue="Python tests.Doctests in testHand" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -291,26 +305,48 @@
       <workItem from="1605697708570" duration="275000" />
       <workItem from="1605703981499" duration="29000" />
       <workItem from="1605775099408" duration="5227000" />
+      <workItem from="1605801083230" duration="832000" />
+      <workItem from="1605865811125" duration="2988000" />
+      <workItem from="1605869125018" duration="529000" />
+      <workItem from="1605869670391" duration="5017000" />
+      <workItem from="1606466937528" duration="3880000" />
+      <workItem from="1606899914342" duration="7880000" />
+      <workItem from="1607077347232" duration="2879000" />
+      <workItem from="1607674050462" duration="1014000" />
+      <workItem from="1607684063044" duration="10638000" />
+      <workItem from="1610098779659" duration="1452000" />
+      <workItem from="1610443679981" duration="6312000" />
+      <workItem from="1610532556543" duration="1662000" />
+      <workItem from="1610615080344" duration="2817000" />
+      <workItem from="1610973036381" duration="1604000" />
+      <workItem from="1611048709226" duration="615000" />
+      <workItem from="1611155974151" duration="1441000" />
+      <workItem from="1611221973169" duration="5771000" />
+      <workItem from="1611244138324" duration="1717000" />
+      <workItem from="1611308431841" duration="4226000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="739" y="275" key="FileChooserDialogImpl" timestamp="1605869461194">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605869461194" />
     <state width="1237" height="142" key="GridCell.Tab.0.bottom" timestamp="1605780016037">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -327,11 +363,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="142" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605780016037" />
-    <state x="301" y="0" key="SettingsEditor" timestamp="1605704003977">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1605869410967">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="301" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1605704003977" />
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604054749160" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605869410967" />
     <state x="437" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1605775102753">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -357,14 +393,14 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PyTest$pyTest.coverage" NAME="pyTest Coverage Results" MODIFIED="1582033781504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyTest$Doctests_in_testHand.coverage" NAME="Doctests in testHand Coverage Results" MODIFIED="1605779997989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/PyTest$vidgearBiServer.coverage" NAME="vidgearBiServer Coverage Results" MODIFIED="1588867467329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyTest$handextraction.coverage" NAME="handextraction Coverage Results" MODIFIED="1583411706870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs" />
     <SUITE FILE_PATH="coverage/PyTest$Doctests_in_testBAG.coverage" NAME="Doctests in testBAG Coverage Results" MODIFIED="1605778830730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/PyTest$Doctests_in_bag.coverage" NAME="Doctests in bag Coverage Results" MODIFIED="1605779010061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pruebas" />
-    <SUITE FILE_PATH="coverage/PyTest$vidgearBiClient.coverage" NAME="vidgearBiClient Coverage Results" MODIFIED="1588867471587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyTest$pyTest.coverage" NAME="pyTest Coverage Results" MODIFIED="1582033781504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyTest$handextraction.coverage" NAME="handextraction Coverage Results" MODIFIED="1583411706870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs" />
-    <SUITE FILE_PATH="coverage/PyTest$Doctests_in_testBAG__1_.coverage" NAME="Doctests in testBAG (1) Coverage Results" MODIFIED="1605778974092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pruebas" />
     <SUITE FILE_PATH="coverage/PyTest$start__1_.coverage" NAME="start (1) Coverage Results" MODIFIED="1583412837047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyTest$vidgearBiServer.coverage" NAME="vidgearBiServer Coverage Results" MODIFIED="1588867467329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyTest$Doctests_in_testHand.coverage" NAME="Doctests in testHand Coverage Results" MODIFIED="1605779997989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/PyTest$Doctests_in_testBAG__1_.coverage" NAME="Doctests in testBAG (1) Coverage Results" MODIFIED="1605778974092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pruebas" />
+    <SUITE FILE_PATH="coverage/PyTest$vidgearBiClient.coverage" NAME="vidgearBiClient Coverage Results" MODIFIED="1588867471587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

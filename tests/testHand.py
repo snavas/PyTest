@@ -5,6 +5,8 @@
 #import numpy as np
 import hashlib
 
+import os
+
 import cv2
 from classes.realsense import RealSense
 from classes.objloader import *
@@ -19,6 +21,10 @@ import matplotlib.pyplot as plt
 #import screeninfo
 import math
 import time
+
+import win32api
+import win32con
+import win32gui
 
 def unit_vector(vector):
     """ Returns the unit vector of the vector.  """
@@ -90,7 +96,6 @@ def id_to_random_color(number):
 
 def main():
     device = RealSense('../material/pinktest.bag')
-    #device = RealSense('D:/Users/samue/Documents/GitHub/PyTest/material/pinktest.bag')
     # device = RealSense("752112070204")
     file = True
     #print("Color intrinsics: ", device.getcolorintrinsics())
@@ -104,11 +109,11 @@ def main():
             if file:
                 image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
             depth = device.getdepthstream()
-            #image = cv2.imread("D:/Users/s_nava02/Desktop/raw_output.png")
-            screenshot = image.copy()
-            if flag == 0:
-                cv2.imwrite("../material/raw_output.png", screenshot)
-            flag -= 1
+            image = cv2.imread("../material/raw_output.png")
+            #screenshot = image.copy()
+            #if flag == 0:
+            #    cv2.imwrite("../material/raw_output.png", screenshot)
+            #flag -= 1
             ###################################################
             # def gethandmask(colorframe image):
             ###################################################
@@ -133,6 +138,12 @@ def main():
             # ret, thresholded = cv2.threshold(blurred, 50, 255, 0)  # TODO: VERY BASIC, TRY OTHER THRESHHOLDS
             ret, thresholded = cv2.threshold(blurred, 200, 255, cv2.THRESH_BINARY)
             # th3 = cv2.adaptiveThreshold(blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+
+            # In order to avoid non-monotonous contours
+            kernel = np.ones((15, 15), np.uint8)
+            #thresholded = cv2.erode(thresholded, kernel, iterations=1)
+            #thresholded = cv2.dilate(thresholded, kernel, iterations=1)
+
             ######################
             # return tresholded
             ######################
@@ -145,6 +156,7 @@ def main():
             method = cv2.CHAIN_APPROX_SIMPLE
             hand_contours = []
             contours, hierarchy = cv2.findContours(thresholded, mode, method)
+            #print(len(contours))
             # contours = sorted(contours, key=cv2.contourArea)  # TODO: is this really necessary?
             for c in contours:
                 # If contours are bigger than a certain area we push them to the array
@@ -154,7 +166,7 @@ def main():
             #####################
             # return hand_contours
             #####################
-
+            #print(len(hand_contours))
             # https://docs.opencv.org/3.4/dd/d49/tutorial_py_contour_features.html
             ###################################################
             # Get Rough Hull
@@ -182,17 +194,17 @@ def main():
                 rhull = np.column_stack((hull[:,0], index[:,0]))
                 centers = utils.groupPointsbyLabels(rhull, clustering.labels_)
 
-                # JUST TO PRINT THE PROBLEMATIC CONTOUR
+                # JUST TO PRINT THE PROBLEMATIC CONTOUR (the one that causes error in CV>)
                 #mask = np.ones(image.shape[:2], dtype="uint8") * 255
                 #cv2.drawContours(mask, cnt, -1, 0, -1)
-                #cv2.imwrite('../234.jpg', mask)
+                #cv2.imwrite('../234.jpg', thresholded)
                 #raise SystemExit(0)
 
                 defects = cv2.convexityDefects(cnt, np.array(centers)[:,2])
                 c = 0
                 for p in hull:
                     # print("init ", p, " - ")
-                    # cv2.circle(image, tuple(p[0]), 10, id_to_random_color(clustering.labels_[c]))
+                    cv2.circle(image, tuple(p[0]), 10, id_to_random_color(clustering.labels_[c]))
                     c += 1
                 #for p in centers:
                     #print("init ", p[0], " - ")
@@ -206,7 +218,7 @@ def main():
                 ###############################################################
                 # get neighbor defect points of each hull point
                 hullPointDefectNeighbors = [] # 0: start, 1: end, 2:defect
-                print("defects.shape[0]: ",defects.shape[0])
+                #print("defects.shape[0]: ",defects.shape[0])
                 for x in range(defects.shape[0]):
                     s, e, f, d = defects[x, 0]
                     start = tuple(cnt[s][0])
@@ -235,7 +247,7 @@ def main():
                     v_cp_ld = (ld[0] - cf[0], ld[1] - cf[1])
                     v_cp_rd = (rd[0] - cf[0], rd[1] - cf[1])
                     beta = angle_between(v_cp_ld, v_cp_rd)
-                    print(beta)
+                    #print(beta)
                     cv2.circle(image, (cf[0], cf[1]), 4, (0, 0, 255)) # candidate finger: red
                     cv2.circle(image, (rd[0], rd[1]), 4, (255, 0, 0)) # right defect: blue
                     cv2.circle(image, (ld[0], ld[1]), 4, (255, 0, 0)) # left defect: blue
@@ -246,7 +258,7 @@ def main():
                     #            math.atan2(cf[1] - ld[1], cf[0] - ld[0]) < maxAngleDeg) and len(fingers) < 5:
                     #    fingers.append(triple[0])
                     i += 1
-                print(len(fingers))
+                #print(len(fingers))
                 for f in fingers:
                     cv2.circle(image, (f[0], f[1]), 4, (255, 255, 255)) # identified finger: white
                     #print("image size: ", image.shape)
@@ -255,6 +267,7 @@ def main():
 
             # Show images
             cv2.namedWindow("Output Frame", cv2.WND_PROP_FULLSCREEN)
+            #os.system('''/usr/bin/osascript -e 'tell app "Finder" to set frontmost of process "python" to true' ''')  # To make window active
             cv2.setWindowProperty("Output Frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
             cv2.imshow('Output Frame', image)
             cv2.waitKey(1)

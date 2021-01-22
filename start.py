@@ -13,10 +13,14 @@ import argparse
 import sys
 import time
 
+import win32api
+import win32con
+import win32gui
+
 HostPort = 5555
 PeerAddress = "localhost"
 PeerPort = 5555
-File = 'C:/Users/s_nava02/sciebo/GECCO/pinktest.bag'
+File = 'material/pinktest.bag'
 fileFlag = True
 calibrationMatrix = []
 oldCalibration = False
@@ -52,7 +56,7 @@ async def custom_frame_generator():
             else:
                 oldCalibration = False
             calibrationMatrix = newcalibrationMatrix
-            print(len(calibrationMatrix))
+            #print(len(calibrationMatrix))
             if len(calibrationMatrix) == 4:
                 #print(depthframe[int(calibrationMatrix[0][1])][int(calibrationMatrix[0][0])])
                 #print("newtabledistance = ", depthframe[calibrationMatrix[0][1]][calibrationMatrix[0][0]])
@@ -142,6 +146,10 @@ async def client_iterator(client):
     # loop over Client's Asynchronous Frame Generator
     cv2.namedWindow("Output Frame", cv2.WND_PROP_FULLSCREEN)
     cv2.setWindowProperty("Output Frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
+
+    #win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, win32gui.GetWindowLong(hwnd, win32con.GWL_EXSTYLE) | win32con.WS_EX_LAYERED)
+    #win32gui.SetLayeredWindowAttributes(hwnd, win32api.RGB(*pink), 0, win32con.LWA_COLORKEY)
+
     async for frame in client.recv_generator():
         # do something with received frames here
         # print("frame recieved")
@@ -154,13 +162,13 @@ async def client_iterator(client):
 async def netgear_async_playback(pattern):
     try:
         # define and launch Client with `receive_mode = True`
-        c_options = {'compression_param': cv2.IMREAD_COLOR}
+        options = {'compression_param': cv2.IMREAD_COLOR}
         client = NetGear_Async(
-            port = HostPort, pattern=1, receive_mode=True, **c_options
+            port=HostPort, pattern=1, receive_mode=True, **options
         ).launch()
-        s_options = {'compression_format': '.jpg', 'compression_param': [cv2.IMWRITE_JPEG_QUALITY, 50]}
+        options = {'compression_format': '.jpg', 'compression_param': [cv2.IMWRITE_JPEG_QUALITY, 50]}
         server = NetGear_Async(
-            address = PeerAddress, port = PeerPort, pattern=1, **s_options
+            address=PeerAddress, port=PeerPort, pattern=1, **options
         )
         server.config["generator"] = custom_frame_generator()
         server.launch()
